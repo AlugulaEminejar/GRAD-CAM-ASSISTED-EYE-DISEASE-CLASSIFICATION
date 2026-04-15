@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    .card{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    form{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+</style>
+
+<div class="card">
+    <h3>🤖 Model 2 – EyeDisease101</h3>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if image_path %}
+        <h4>Uploaded Image</h4>
+        <img src="/{{ image_path }}" width="300">
+    {% endif %}
+
+    {% if result %}
+        <h4>Prediction</h4>
+        <p>{{ result }}</p>
+    {% endif %}
+</div>
+
+{% endblock %}

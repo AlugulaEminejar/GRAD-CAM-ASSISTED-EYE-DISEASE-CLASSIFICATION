@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card">
+    <h3>🏠 Home</h3>
+    <p>
+        This project presents a <b>Grad-CAM Assisted Eye Disease Classification System</b>
+        using deep learning techniques. The system employs two independent CNN models
+        trained on OCT and fundus image datasets.
+    </p>
+
+    <p>
+        The objective is to assist ophthalmologists by providing accurate,
+        automated retinal disease diagnosis with visual interpretability.
+    </p>
+
+    <ul>
+        <li>Model 1: OCT C8 – 8-class classification with Grad-CAM</li>
+        <li>Model 2: EyeDisease101 – 6-class fundus classification</li>
+    </ul>
+
+    <p><b>⚠ Academic & research use only</b></p>
+</div>
+
+{% endblock %}

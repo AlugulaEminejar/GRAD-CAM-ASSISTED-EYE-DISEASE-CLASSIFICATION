@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card">
+    <h3>📘 Instructions</h3>
+    <ol>
+        <li>Select the required model from the navigation bar.</li>
+        <li>Upload a retinal image (OCT or Fundus).</li>
+        <li>Click on the Predict button.</li>
+        <li>View the predicted disease and confidence score.</li>
+        <li>Grad-CAM visualization is shown only for Model 1.</li>
+    </ol>
+
+    <p>
+        Grad-CAM highlights clinically relevant regions used by the model
+        for decision making.
+    </p>
+</div>
+
+{% endblock %}
